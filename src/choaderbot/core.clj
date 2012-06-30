@@ -60,7 +60,7 @@
 ;; end stolen code
 
 (defn google-url [s]
-  (str "http://google.com/search?q=" (url-encode s)))
+  (str "http://lmgtfy.com/?q=" (url-encode s)))
 
 (declare bot)
 
@@ -68,7 +68,6 @@
   (send-message bot victim link))
 
 (defn handle-message [{:keys [message nick]}]
-  (println nick " " message)
   (when ((:victims @config) nick)
     (tell-victim nick (google-url message))))
 
@@ -81,7 +80,7 @@
 (defn disconnect-bot []
   (close bot))
 
-(defn -main
+(defn -main []
   (load-config) 
   (def bot-params
        {:name (:name @config)

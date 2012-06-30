@@ -9,4 +9,5 @@
                  [irclj "0.4.1-SNAPSHOT"]
                  [clj-time "0.3.0"]
                  [overtone/at-at "0.2.1"]
-                 [swank-clojure "1.5.0-SNAPSHOT"]])
+                 [swank-clojure "1.5.0-SNAPSHOT"]]
+  :main choaderbot.core)
