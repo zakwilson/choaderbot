@@ -1,4 +1,5 @@
 (ns choaderbot.core
+  (:gen-class)
   (:use irclj.core
         clj-http.core)
   (:require [clojure.string :as str]
